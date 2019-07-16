@@ -1,19 +1,16 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+// import logo from "./logo.svg";
+import "./App.scss";
 
 function App() {
-  const [message, setMessage] = React.useState("JS is cool!");
+  const isActive = true;
+  const headerColor = isActive ? "green" : "red";
 
-  function handleClick() {
-    setMessage("my new message");
-  }
-
-  return (
-    <div>
-      <h1>{message}</h1>
-      <button onClick={handleClick}>Update</button>
-    </div>
+  return React.createElement(
+    "h1",
+    { className: "whoa" },
+    "WHOA",
+    React.createElement("span", null, headerColor)
   );
 }
 
